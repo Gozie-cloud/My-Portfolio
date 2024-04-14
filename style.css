@@ -347,6 +347,23 @@ footer {
 }
 
 @media (max-width: 470px) {
+
+    .box2 {
+        display: none;
+    }
+
+    .box1 {
+        display: none;
+    }
+
+    .banner .text-content .name {
+        font-size: 40px;
+    }
+
+    .banner .text-content .skill {
+        font-size: 14px;
+    }
+
     .banner .text-content .links {
         display: flex;
         align-items: flex-start;
