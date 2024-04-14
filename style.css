@@ -10,13 +10,7 @@
     scroll-behavior: smooth;
 }
 
-header {
-    height: 100vh;
-    width: 100%;
-    background: #0b1215;
-}
-
-header nav {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,45 +20,45 @@ header nav {
     z-index: 1000;
 }
 
-header nav .navbar {
+.header .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 81.33%;
     margin: 25px auto;
 }
 
-header nav .navbar .logo {
+.header .navbar .logo {
     color: #fff;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
 }
 
-header nav .navbar #menu {
+.header .navbar #menu {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header nav .navbar li {
+.header .navbar li {
     list-style-type: none;
     margin: 0 10px;
 }
 
-header nav .navbar a {
+.header .navbar a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
 }
 
-header nav .navbar a:hover,
-header nav .navbar a.active {
+.header .navbar a:hover,
+header .navbar a.active {
     color: #02ecec;
 }
 
-header nav .navbar button {
+.header .navbar button {
     padding: 8px 24px;
     border-radius: 8px;
     border: none;
@@ -73,54 +67,58 @@ header nav .navbar button {
     font-weight: 500;
 } 
 
-header nav .navbar #bar {
+.header .navbar #bar {
     display: none;
     color: white;
     font-size: 30px;
 }
 
-header nav .navbar #close {
+.header .navbar #close {
     display: none;
     color: white;
     font-size: 30px;
 }
 
-header .text-content {
-    position: absolute;
-    top: 30%;
-    left: 10%;
+.banner {
+    background-color: #0b1215;
+    position: relative;
+    padding: 60px 9%;
+}
+
+.banner .text-content {
+    margin-top: 8%;
     max-width: 37%;
     color: #ffffff;
 }
 
-header .text-content .greeting {
+.banner .text-content .greeting {
     font-size: 12px;
     text-transform: uppercase;
 }
 
-header .text-content .name {
+.banner .text-content .name {
     font-size: 50px;
     margin: 20px 0;
     font-weight: 800;
 }
 
-header .text-content .skill {
+.banner .text-content .skill {
     color: #00ffbb;
 }
 
-header .text-content .about-me {
+.banner .text-content .about-me {
     font-size: 14px;
     margin: 20px 0 30px 0;
     line-height: 20px;
     /* font-weight: 500; */
 }
 
-header .text-content .links {
+.banner .text-content .links {
     display: flex;
     align-items: center;
 }
 
-header .text-content .links button {
+.banner .text-content .links button {
     padding: 10px 26px;
     border-radius: 8px;
     border: none;
@@ -128,7 +126,7 @@ header .text-content .links button {
     font-weight: 800;
 }
 
-header .text-content .links .social {
+.banner .text-content .links .social {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,7 +134,7 @@ header .text-content .links .social {
     margin-left: 20px;
 }
 
-header .text-content .links a {
+.banner .text-content .links a {
     text-decoration: none;
     color: #fff;
     height: 40px;
@@ -148,10 +146,10 @@ header .text-content .links a {
     font-size: 18px;
 }
 
-header .banner-img {
+.banner .banner-img {
     position: absolute;
     top: 15%;
-    right: 5%;
+    right: 0;
     height: 400px;
 }
 
@@ -175,7 +173,7 @@ header .banner-img {
 .box3 {
     border-radius: 50%;
     bottom: 5%;
-    right: 20%;
+    right: 50%;
     position: absolute;
     height: 20px;
     width: 20px;
@@ -186,7 +184,7 @@ header .banner-img {
 
 .banner2 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    padding: 3% 0;
+    padding: 3% 9%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,11 +285,10 @@ footer {
 
 
 @media (max-width: 1020px) {
-    header nav .navbar #menu {
+    .header .navbar #menu {
         position: fixed;
         top: 0;
         right: -300px;
-        height: 80vh;
         width: 300px;
         display: flex;
         flex-direction: column;
@@ -303,39 +300,40 @@ footer {
         transition: all 0.3s ease;
     }
 
-    header nav .navbar #menu.active {
+    .header .navbar #menu.active {
         right: 0;
     }
 
-    header nav .navbar #bar {
+    .header .navbar #bar {
         display: flex;
     }
-    header nav .navbar #close {
+    .header .navbar #close {
         position: absolute;
         top: 30px;
         display: flex;
     }
 
-    header nav .navbar li {
+    .header .navbar li {
         margin: 10px 0;
     }
     
-    header nav .navbar button {
+    .header .navbar button {
         border-radius: 8px;
         margin: 10px 0;
     }
 
-    header .banner-img {
+    .banner .banner-img {
         display: none;
     }
-    header .text-content {
-        max-width: 80%;
+
+    .banner .text-content {
+        max-width: 100%;
     }
     .box2 {
-        top: 20%;
+        top: 25%;
     }
     .box1 {
-        top: 80%;
+        left: 2%;
     }
 
     .projects .project {
@@ -349,58 +347,18 @@ footer {
 }
 
 @media (max-width: 470px) {
-    header {
-        height: 70vh;
-        width: 100%;
-        background: #0b1215;
-    }
-
-    header .text-content {
-        position: absolute;
-        top: 16%;
-        left: 10%;
-        max-width: 75%;
-        color: #ffffff;
-    }
-
-    header .text-content .links button {
-        padding: 10px 26px;
-        font-size: 10px;
-    }
-
-    header .text-content .links {
+    .banner .text-content .links {
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        align-items: start;
     }
 
-    header .text-content .links .social {
-        width: 90%;
-        margin: 30px 0;
+    .banner .text-content .links .social {
+        margin: 25px 0 0 0;
     }
 
-    header .text-content .greeting {
-        font-size: 8px;
-        text-transform: uppercase;
+    .banner .text-content {
+        margin-top: 15%;
     }
-
-    header .text-content .name {
-        font-size: 30px;
-        margin: 20px 0;
-        font-weight: 800;
-    }
-
-    header .text-content .skill {
-        color: #00ffbb;
-        font-size: 10px;
-    }
-    
-    header .text-content .about-me {
-        font-size: 11px;
-        margin: 20px 0 30px 0;
-        line-height: 20px;
-        /* font-weight: 500; */
-    }
-
 }
 
