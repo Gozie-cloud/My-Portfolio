@@ -230,7 +230,7 @@ header .navbar a.active {
     padding: 20px;
     display: flex;
     align-items: center;
-    margin: 3% 20px;
+    margin-top: 3%;
     width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 16px;
@@ -246,18 +246,17 @@ header .navbar a.active {
     
 }
 
-.projects .project .text-content {
+/* .projects .project .text-content {
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     border-radius: 0 16px 16px 0;
-}
+} */
 
 .projects .project .text-content h1 {
     font-weight: 800;
-    margin-bottom: 10px;
 }
 
 .projects .project .text-content p {
@@ -350,10 +349,14 @@ footer {
 /* Mobile Devices */
 
 @media (max-width: 470px) {
+
     .header .navbar .logo {
         font-size: 12px;
         font-weight: 500;
         cursor: pointer;
+    }
+    .header .navbar #bar {
+        font-size: 15px;
     }
 
     .banner .text-content {
@@ -398,21 +401,39 @@ footer {
     .box3 {
         display: none;
     }
+    .projects {
+        /* background-color: #0b1215; */
+        padding: 8% 5%;
+    }
 
     .projects .project {
-        padding: 0;
         text-align: center;
+        margin: 15px 0;
     }
 
-    .projects .project .text-content p {
-        font-size: 11px;
-    }
     .projects .project .text-content h1 {
         font-size: 20px;
     }
-    .projects .project .text-content h4 {
-        font-size: 11px;
+    .projects .project .text-content p {
+        font-size: 12px;
     }
 
+    .projects .heading p {
+        font-size: 12px;
+    }
+
+
+    .banner2 {
+        padding: 4% 9%;
+    }
+    .banner2 .tech-stack .stack {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+    .banner2 .tech-stack h2 {
+        font-size: 15px;
+    }
 }
 
