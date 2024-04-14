@@ -185,13 +185,9 @@ header .navbar a.active {
 .banner2 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     padding: 3% 9%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .banner2 .tech-stack {
-    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -210,7 +206,7 @@ header .navbar a.active {
 
 .projects {
     /* background-color: #0b1215; */
-    padding: 70px 9% 40px 9%;
+    padding: 70px 9%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -223,7 +219,7 @@ header .navbar a.active {
 
 .projects .project {
     background-color: #e9e9e9;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     align-items: center;
     margin: 3% 20px;
@@ -288,8 +284,8 @@ footer {
     .header .navbar #menu {
         position: fixed;
         top: 0;
-        right: -300px;
-        width: 300px;
+        right: -100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -337,9 +333,7 @@ footer {
     }
 
     .projects .project {
-        padding: 50px;
         flex-direction: column;
-        text-align: center;
     }
     .projects .project img {
         height: 200px;
@@ -347,13 +341,14 @@ footer {
 }
 
 @media (max-width: 470px) {
-
-    .box2 {
-        display: none;
+    .header .navbar .logo {
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
     }
 
-    .box1 {
-        display: none;
+    .banner .text-content {
+        margin-top: 15%;
     }
 
     .banner .text-content .greeting {
@@ -380,10 +375,24 @@ footer {
 
     .banner .text-content .links .social {
         margin: 25px 0 0 0;
+        width: 100%;
     }
 
-    .banner .text-content {
-        margin-top: 15%;
+    .box1 {
+        display: none;
     }
+    
+    .box2 {
+        display: none;
+    }
+
+    .box3 {
+        display: none;
+    }
+
+    .projects .project {
+        padding: 0;
+    }
+
 }
 
