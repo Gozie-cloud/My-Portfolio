@@ -467,8 +467,17 @@ header .navbar a.active {
     .banner2 .tech-stack h2 {
         font-size: 15px;
     }
-    #about .content p {
-        text-align: justify;
+
+    #about {
+        padding: 5% 4%;
     }
+
+    #projects {
+        padding: 0 4% 5% 4%;
+    }
+
+    #projects .project .text-content button {
+        padding: 10px 14px;
 }
 
+}
