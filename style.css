@@ -274,7 +274,6 @@ header .navbar a.active {
 }
 
 #projects .project {
-    text-align: center;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -303,9 +302,6 @@ header .navbar a.active {
 
 #projects .project .text-content .buttons {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #projects .project .text-content button {
@@ -508,7 +504,9 @@ header .navbar a.active {
         padding: 1rem 2rem 2rem 2rem;
     }
     #projects .project .text-content button {
-        padding: 10px 14px;
+        padding: 0;
+        height: 40px;
+        width: 100px;
     }
 
 }
