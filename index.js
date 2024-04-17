@@ -9,7 +9,7 @@ if (bar) {
 }
 
 if (close) {
-    close.addEventListener('click', () => {
+    menu.addEventListener('click', () => {
         menu.classList.remove('active')
     })
 }
