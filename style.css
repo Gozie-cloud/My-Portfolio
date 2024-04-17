@@ -345,24 +345,24 @@ header .navbar a.active {
 }
 /* Footer */
 
-.contact {
+#contact {
     color: #fff;
     font-family: "Montserrat", sans-serif;
     padding: 10% 9%;
     background: #0b1215;
     width: 100%;
 }
-.contact h1{
+#contact h1{
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.contact form {
+#contact form {
     display: flex;
     flex-direction: column;
 }
 
-.contact form input {
+#contact form input {
     background-color: #f1f1f1;
     border: none;
     padding: 0 0 0 10px;
@@ -372,17 +372,18 @@ header .navbar a.active {
     border-radius: 8px;
     outline: none;
 }
-.contact form .message {
+
+#contact form .message {
     width: 100%;
     height: 100px;
 }
-.contact form .message::placeholder {
+#contact form .message::placeholder {
     position: absolute;
     top: 10%;
 }
 
 
-.contact form .send {
+#contact form .send {
     background-color: #02ecec;
 }
 
