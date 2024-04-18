@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 
@@ -51,7 +52,6 @@
 
 .header .navbar a {
     color: #fff;
-    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
 }
@@ -61,7 +61,7 @@ header .navbar a.active {
     color: #02ecec;
 }
 
-.header .navbar button {
+.header .navbar .resume {
     padding: 8px 24px;
     border-radius: 8px;
     border: 2px solid #00ffbb;
@@ -69,9 +69,10 @@ header .navbar a.active {
     background: #00ffbb;
     font-weight: 500;
     cursor: pointer;
+    color: black;
 } 
 
-.header .navbar button:hover {
+.header .navbar .resume:hover {
     color: white;
     background-color: transparent;
     border: 2px solid #00ffbb;
@@ -100,7 +101,7 @@ header .navbar a.active {
 
 .banner .text-content {
     margin-top: 8%;
-    max-width: 37%;
+    max-width: 50%;
     color: #ffffff;
 }
 
@@ -110,7 +111,7 @@ header .navbar a.active {
 }
 
 .banner .text-content .name {
-    font-size: 50px;
+    font-size: 40px;
     margin: 20px 0;
     font-weight: 800;
 }
@@ -130,17 +131,20 @@ header .navbar a.active {
     align-items: center;
 }
 
-.banner .text-content .links button {
-    padding: 10px 26px;
+.banner .text-content .links .hire-me {
+    padding: 8px 24px;
     border-radius: 8px;
     border: 2px solid #00ffbb;
     background: #00ffbb;
-    cursor: pointer;
-}
-.banner .text-content .links button a {
-    text-decoration: none;
     font-weight: 500;
+    cursor: pointer;
     color: black;
+    font-size: 14px;
+}
+.banner .text-content .links .hire-me:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #00ffbb;
 }
 
 
@@ -225,7 +229,7 @@ header .navbar a.active {
 /* About Me*/
 #about {
     font-family: "Comfortaa", sans-serif;
-    padding: 5% 9%;
+    padding: 8% 9% 0 9%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -258,14 +262,14 @@ header .navbar a.active {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     margin-top: 20px;
-    line-height: 20px;
+    line-height: 22px;
     font-size: 14px;
 }
 
 /* Projects */
 
 #projects {
-    padding: 5% 9%;
+    padding: 8% 9% 5% 9%;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -278,7 +282,7 @@ header .navbar a.active {
     margin-bottom: 5px;
 }
 #projects .heading p {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #projects .row {
@@ -311,13 +315,14 @@ header .navbar a.active {
 }
 
 #projects .project .text-content p {
-    line-height: 20px;
+    line-height: 22px;
     font-size: 14px;
     margin: 15px 0;
 }
 
 #projects .project .text-content button {
-    padding: 10px 24px;
+    height: 40px;
+    width: 100px;
     border-radius: 5px;
     border: 2px solid #156f75;
     margin-right: 10px;
@@ -347,9 +352,12 @@ header .navbar a.active {
 #contact {
     color: #fff;
     font-family: "Montserrat", sans-serif;
-    padding: 10% 9%;
+    padding: 8% 9% 5% 9%;
     background: #0b1215;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #contact h1{
     font-size: 20px;
@@ -357,6 +365,7 @@ header .navbar a.active {
 }
 
 #contact form {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -373,16 +382,16 @@ header .navbar a.active {
 }
 
 #contact form .message {
-    width: 100%;
+    border: none;
+    padding: 10px 0 0 10px;
     height: 100px;
+    margin: 10px 0;
+    border-radius: 8px;
+    outline: none;
 }
-#contact form .message::placeholder {
-    position: absolute;
-    top: 10%;
-}
-
 
 #contact form .send {
+    color: black;
     background-color: #02ecec;
 }
 
@@ -428,7 +437,7 @@ footer {
         margin: 10px 0;
     }
     
-    .header .navbar button {
+    .header .navbar .resume {
         border-radius: 8px;
         margin: 10px 0;
     }
@@ -448,10 +457,14 @@ footer {
     }
 
     #projects .row {
-        grid-gap: 1rem;
+        grid-gap: 3rem;
         grid-template-columns: 1fr;
     }
 
+    #projects .project h1 {
+        font-size: 18px;
+    }
+    
     #about .content img {
         height: 150px;
     }
@@ -468,6 +481,10 @@ footer {
 
     #about .content .text {
         padding: 0;
+    }
+
+    .image {
+        display: none;
     }
 }
 
@@ -548,28 +565,15 @@ footer {
 
     /* About Section */
     #about {
-        padding: 10% 20px;
+        padding: 17% 20px 0 20px;
     }
 
 
     /* Projects Section*/
     #projects {
-        padding: 10% 20px;
+        padding: 17% 20px;
     }
-
-    #projects .project h1 {
-        font-size: 18px;
-    }
-
-    #projects p {
-        font-size: 10px;
-    }
-
-    #projects .row {
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
-
+    
     #projects .project .text-content button {
         padding: 0;
         height: 40px;
